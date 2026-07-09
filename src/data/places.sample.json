@@ -1,0 +1,37 @@
+[
+  {
+    "id": "p1",
+    "name": "Hauptstraße 12, Berlin-Schöneberg",
+    "lat": 52.4842,
+    "lon": 13.3547,
+    "importance": 0.42
+  },
+  {
+    "id": "p2",
+    "name": "Hauptstraße 88, Berlin-Steglitz",
+    "lat": 52.4569,
+    "lon": 13.3222,
+    "importance": 0.31
+  },
+  {
+    "id": "p3",
+    "name": "Hauptstraße 3, Berlin-Pankow",
+    "lat": 52.5694,
+    "lon": 13.4019,
+    "importance": 0.55
+  },
+  {
+    "id": "p4",
+    "name": "Hauptstraße 45, Berlin-Köpenick",
+    "lat": 52.4442,
+    "lon": 13.5758,
+    "importance": 0.27
+  },
+  {
+    "id": "p5",
+    "name": "Hauptbahnhof Berlin",
+    "lat": 52.5251,
+    "lon": 13.3694,
+    "importance": 0.98
+  }
+]
