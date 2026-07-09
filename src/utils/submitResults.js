@@ -2,8 +2,9 @@
 // Ersetze dies durch deine eigene Webhook-URL.
 const ENDPOINT_URL = 'https://script.google.com/macros/s/AKfycbxVNus6Tq6IfVUP1ooSj1xfMAACewTdoWofmKf_tkl9AIAaRoVHkz_I5gVzkBsdPIH_/exec';
 
-export async function submitResults(payload) {
+export async function submitResults({payload, setStep}) {
   try {
+    setStep("loading")
     await fetch(ENDPOINT_URL, {
       method: 'POST',
       mode: 'no-cors',

@@ -1,7 +1,7 @@
 import { Flex, Progress, Paper, Stack } from "@mantine/core";
 
 export default function StepLayout({ children, step }) {
-  const stepOrder = ["intro", "task1", "halfway", "task2", "finish", "done"];
+  const stepOrder = ["intro", "task1", "halfway", "task2", "finish", "loading", "done"];
   const currentIndex = stepOrder.indexOf(step);
 
   return (

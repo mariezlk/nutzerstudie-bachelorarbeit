@@ -1,4 +1,4 @@
-import { Button, Title, Text, Checkbox } from '@mantine/core';
+import { Button, Title, Text, Checkbox, Loader } from '@mantine/core';
 import './App.css';
 import { useRef, useState } from 'react';
 import StepLayout from './components/StepLayout';
@@ -52,7 +52,7 @@ function App() {
       questionnaire: questionnaireData,
       submittedAt: new Date().toISOString(),
     };
-    await submitResults(payload);
+    await submitResults({ payload, setStep });
     setStep("done");
   }
 
@@ -164,6 +164,14 @@ if (step === "task1") {
         <Text c="blue" ta="center">Sie können das Browserfenster nun schließen :)</Text>
       </StepLayout>
     );
+  }
+  if (step === "loading") {
+    return (
+      <StepLayout step={step}>
+        <Loader color="blue" type="bars" />
+        <Text c="blue" ta="center">Bitte warten Sie einen Moment, die Daten werden gespeichert.</Text>
+      </StepLayout>
+    )
   }
 }
 
