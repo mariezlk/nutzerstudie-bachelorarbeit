@@ -1,5 +1,4 @@
 import { useState, useRef, useCallback } from 'react';
-import { getSortedSuggestions } from '../utils/sorting';
 import { TextInput, Button } from '@mantine/core';
 import { haversineDistance } from '../utils/distance';
 

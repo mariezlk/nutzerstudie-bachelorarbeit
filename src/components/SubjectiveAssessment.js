@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Radio, Stack, Textarea, Button, Flex } from "@mantine/core";
+import { Radio, Stack, Textarea, Button, Flex } from "@mantine/core";
 
 const SubjectiveAssessment = ({ onSubmit }) => {
     const [preferred, setPreferred] = useState('');
@@ -27,7 +27,7 @@ const SubjectiveAssessment = ({ onSubmit }) => {
                 </Stack>
                 </Radio.Group>
 
-                {(preferred == 'Version 1' || preferred == 'Version 2') &&
+                {(preferred === 'Version 1' || preferred === 'Version 2') &&
                     <Textarea
                         label="Was hat Ihnen an der bevorzugten Version besonders geholfen?"
                         value={comment}

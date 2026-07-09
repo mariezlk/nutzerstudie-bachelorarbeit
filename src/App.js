@@ -1,6 +1,6 @@
-import { Button, Flex, Title, Text, CheckIcon, Checkbox, TextInput } from '@mantine/core';
+import { Button, Title, Text, Checkbox } from '@mantine/core';
 import './App.css';
-import { useRef, useState, useMemo } from 'react';
+import { useRef, useState } from 'react';
 import StepLayout from './components/StepLayout';
 import { useMediaQuery } from '@mantine/hooks';
 import { submitResults } from './utils/submitResults';

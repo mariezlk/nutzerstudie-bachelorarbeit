@@ -4,7 +4,7 @@ const ENDPOINT_URL = 'https://script.google.com/macros/s/AKfycbxVNus6Tq6IfVUP1oo
 
 export async function submitResults(payload) {
   try {
-    const response = await fetch(ENDPOINT_URL, {
+    await fetch(ENDPOINT_URL, {
       method: 'POST',
       mode: 'no-cors',
       headers: { 'Content-Type': 'text/plain' }, // vermeidet CORS-Preflight bei Apps Script
