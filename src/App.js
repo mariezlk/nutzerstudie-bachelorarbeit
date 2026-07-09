@@ -4,7 +4,6 @@ import { useRef, useState, useMemo } from 'react';
 import StepLayout from './components/StepLayout';
 import { useMediaQuery } from '@mantine/hooks';
 import { submitResults } from './utils/submitResults';
-import placesData from './data/places.sample.json';
 import SearchTask from './components/SearchTask';
 import SubjectiveAssessment from './components/SubjectiveAssessment';
 
@@ -16,8 +15,6 @@ function App() {
   const [task1Selected, setTask1Selected] = useState(false);
   const [task2Selected, setTask2Selected] = useState(false);
   const isMobile = useMediaQuery('(max-width: 48em)');
-
-  const places = useMemo(() => placesData, []);
 
   const ORIGIN = { lat: 52.51198625339564, lon: 13.315920121934308 }; // Koordinaten der Hochschule
 
@@ -105,7 +102,6 @@ if (step === "task1") {
     <StepLayout step={step}>
       <Title ta="center" order={2}>Aufgabe 1</Title>
       <SearchTask
-        places={places}
         origin={ORIGIN}
         condition={conditionOrder[0]}
         taskLabel="task_1"
@@ -137,7 +133,6 @@ if (step === "task1") {
       <StepLayout step={step}>
         <Title ta="center" order={2}>Aufgabe 2</Title>
         <SearchTask
-          places={places}
           origin={ORIGIN}
           condition={conditionOrder[1]}
           taskLabel="task_2"

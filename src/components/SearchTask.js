@@ -9,7 +9,7 @@ const LOCATIONIQ_KEY = 'pk.ac3136f711de1f35b7bf4fa2079f2f57'; //locationiq.com A
 // condition: 'popularity' | 'distance'
 // places: Array der geladenen Orte
 // onComplete: Callback, der die gemessene Zeit + Metadaten übergibt
-export default function SearchTask({ places, origin, condition, taskLabel, onComplete }) {
+export default function SearchTask({ origin, condition, taskLabel, onComplete }) {
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]);
   const startTimeRef = useRef(null); // Zeitpunkt des ersten Tastendrucks
