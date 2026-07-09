@@ -87,6 +87,7 @@ export default function SearchTask({ origin, condition, taskLabel, onComplete })
   function handleSelect(place) {
     const elapsedMs = performance.now() - startTimeRef.current;
     setQuery(place.name);
+    setSuggestions([]);
     onComplete({
       taskLabel,
       condition,
