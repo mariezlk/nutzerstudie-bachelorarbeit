@@ -71,7 +71,7 @@ function App() {
         und Management in Berlin und möchten nach Hause. Geben Sie im
         Eingabefeld Ihre <strong>Heimatadresse</strong> ein und wählen Sie sie aus der
         Vorschlagsliste aus, sobald sie erscheint. Sie machen diese Aufgabe
-        <strong> zweimal hintereinander</strong>. Am Ende bitten wir Sie um eine kurze
+        <strong> zweimal hintereinander</strong>. Am Ende bitte ich Sie um eine kurze
         Einschätzung.
       </Text>
       <Text ta="center">
