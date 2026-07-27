@@ -105,7 +105,7 @@ export default function SearchTask({ origin, condition, taskLabel, onComplete })
         h={50}
         value={query}
         onChange={handleChange}
-        placeholder="Geben Sie hier bitte Ihre Heimatadresse ein"
+        placeholder="Musterstraße 1a, 12345 Musterstadt, Musterland"
         styles={{
           input: {
             borderRadius: 0,

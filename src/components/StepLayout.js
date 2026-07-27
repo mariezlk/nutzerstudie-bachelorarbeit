@@ -1,11 +1,11 @@
 import { Flex, Progress, Paper, Stack } from "@mantine/core";
 
 export default function StepLayout({ children, step }) {
-  const stepOrder = ["intro", "task1", "halfway", "task2", "finish", "loading", "done"];
+  const stepOrder = ["intro", "need", "start", "task1", "halfway", "task2", "finish", "loading", "done"];
   const currentIndex = stepOrder.indexOf(step);
 
   return (
-    <Flex h="100%" w="100%" align="center" justify="center" p="md">
+    <Flex mih="100%" w="100%" align="center" justify="center" p="md">
       <Paper
         w={{ base: "100%", sm: "80%", md: "60%", lg: "50%" }}
         maw={700}
