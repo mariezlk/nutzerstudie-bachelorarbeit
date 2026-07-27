@@ -25,12 +25,12 @@ const Need = ({onSubmit}) => {
                     ))}
                 </Stack>
                 </Radio.Group>
-                {need == '' && (
+                {need === '' && (
                     <Text c="blue" ta="center" fz={{ base: "sm", sm: "md" }}>
                         Bitte beantworten Sie die Frage, um fortzufahren.
                     </Text>
                 )}
-                <Button disabled={need == '' ? true : false} type="submit" w="70%" mt={20}>Frage beantworten</Button>
+                <Button disabled={need === '' ? true : false} type="submit" w="70%" mt={20}>Frage beantworten</Button>
             </Flex>
         </form>
     );
