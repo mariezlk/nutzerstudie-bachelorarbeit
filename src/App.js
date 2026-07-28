@@ -49,8 +49,8 @@ function App() {
   async function handleQuestionnaireSubmit(questionnaireData) {
     const payload = {
       participantId,
-      conditionOrder,
       needOfNewParameters,
+      conditionOrder,
       taskResults: taskResultsRef.current,
       questionnaire: questionnaireData,
       submittedAt: new Date().toISOString(),
@@ -60,7 +60,7 @@ function App() {
   }
 
   function handleNeed(need) {
-    setNeedOfNewParamteres(need)
+    setNeedOfNewParamteres(need.need)
     setStep("start");
   }
 

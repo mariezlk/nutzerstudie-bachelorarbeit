@@ -1,6 +1,6 @@
 // URL des Google Apps Script Web-App-Deployments (siehe separates Skript)
 // Ersetze dies durch deine eigene Webhook-URL.
-const ENDPOINT_URL = 'https://script.google.com/macros/s/AKfycbxVNus6Tq6IfVUP1ooSj1xfMAACewTdoWofmKf_tkl9AIAaRoVHkz_I5gVzkBsdPIH_/exec';
+const ENDPOINT_URL = 'https://script.google.com/macros/s/AKfycbxijqJwcUsWybdPpdBoPLN3rwLV1NYEfMj-NYD87bh9KDaTYwoKb6s6c7IdSgDD4cCnzQ/exec';
 
 export async function submitResults({payload, setStep}) {
   try {
