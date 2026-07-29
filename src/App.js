@@ -80,7 +80,7 @@ function App() {
         <Text ta="center" fz={{ base: "sm", sm: "md" }}>
           Anschließend stellen Sie sich vor, Sie stehen an der FOM Hochschule für Oekonomie
           und Management in Berlin und möchten nach Hause. Geben Sie im
-          Eingabefeld Ihre <strong>Heimatadresse</strong> ein und wählen Sie sie aus der
+          Eingabefeld Ihre <strong> genaue Heimatadresse</strong> ein und wählen Sie sie aus der
           Vorschlagsliste aus, sobald sie erscheint. Sie machen diese Aufgabe <strong> zweimal hintereinander</strong>. 
           Am Ende bitte ich Sie um eine kurze
           Einschätzung.
@@ -128,9 +128,9 @@ function App() {
         <Title ta="center" order={3}>Sie haben den ersten Teil der Nutzerstudie abgeschlossen✅</Title>
         <Text ta="center" fz={{ base: "sm", sm: "md" }}>
           Nun folgt die bereits beschriebene Aufgabe.
-          Geben Sie hierzu im Eingabefeld Ihre <strong>Heimatadresse</strong> ein und wählen Sie sie aus der
+          Geben Sie hierzu im Eingabefeld Ihre <strong>genaue Heimatadresse</strong> ein und wählen Sie sie aus der
           Vorschlagsliste aus, sobald sie erscheint. Starten Sie bei der Eingabe bitte mit dem
-          Straßennamen und der Hausnummer.
+          <strong> Straßennamen</strong> und der <strong>Hausnummer</strong>.
         </Text>
         <Button onClick={() => setStep("task1")}>
           Mit Aufgabe 1 starten
@@ -143,7 +143,8 @@ function App() {
       <StepLayout step={step}>
         <Title ta="center" order={2}>Aufgabe 1</Title>
         <Text ta="center" fz={{ base: "sm", sm: "md" }}>
-          Geben Sie hier bitte Ihre Heimatadresse im dargestellten Format ein.
+          Geben Sie hier bitte Ihre Heimatadresse ein. Starten Sie mit Straßenname und Hausnummer. <br/>
+          Wählen Sie sie aus der Vorschlagsliste aus, sobald die richtige Adresse erscheint.
         </Text>
         <SearchTask
           origin={ORIGIN}
@@ -177,7 +178,8 @@ function App() {
       <StepLayout step={step}>
         <Title ta="center" order={2}>Aufgabe 2</Title>
         <Text ta="center" fz={{ base: "sm", sm: "md" }}>
-          Geben Sie hier bitte erneut Ihre Heimatadresse im gleichen Format ein.
+          Geben Sie hier bitte erneut Ihre Heimatadresse ein. Starten Sie auch hier mit Straßenname und Hausnummer. <br/>
+          Wählen Sie auch hier die Adresse aus der Vorschalgsliste aus, sobald die richtige erscheint.
         </Text>
         <SearchTask
           origin={ORIGIN}

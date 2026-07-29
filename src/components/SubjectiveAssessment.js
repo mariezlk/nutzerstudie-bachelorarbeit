@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Radio, Stack, Textarea, Button, Flex } from "@mantine/core";
+import { Radio, Stack, Textarea, Button, Flex, Text } from "@mantine/core";
 
 const SubjectiveAssessment = ({ onSubmit }) => {
     const [preferred, setPreferred] = useState('');
@@ -37,7 +37,13 @@ const SubjectiveAssessment = ({ onSubmit }) => {
                     />
                 }
 
-                <Button type="submit" w="70%" mt={30}>Studie abschließen</Button>
+                {preferred === '' && (
+                    <Text c="blue" ta="center" fz={{ base: "sm", sm: "md" }}>
+                        Wählen Sie eine der obigen Optionen aus, um fortzufahren.
+                    </Text>
+                )}
+
+                <Button disabled={preferred !== '' ? false : true} type="submit" w="70%" mt={20}>Studie abschließen</Button>
             </Flex>
         </form>
     );
