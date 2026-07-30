@@ -114,7 +114,7 @@ function App() {
     return (
       <StepLayout step={step}>
         <Title ta="center" fz={{ base: "h5", sm: "h3" }}>
-          Hatten Sie schon mal das Problem, dass bei der Eingabe eines Ziels bei Google Maps 
+          Hatten Sie schon mal das Problem, dass bei der Eingabe eines Ziels bei zum Beispiel Google Maps 
           oder dem Deutsche Bahn Navigator ihr gewünschtes Ziel nicht während der Eingabe 
           vorgeschlagen worden ist?
         </Title>
