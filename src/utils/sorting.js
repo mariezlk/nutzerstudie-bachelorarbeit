@@ -9,14 +9,12 @@ export function filterByText(places, query) {
   return places.filter((place) => place.name.toLowerCase().includes(q));
 }
 
-// Schritt 2, Version "popularity": Sortierung nach Bekanntheit
-// (z. B. OSM importance-Wert, höher = bekannter)
+// Schritt 2, Version "popularity"
 export function sortByPopularity(places) {
   return [...places].sort((a, b) => b.importance - a.importance);
 }
 
-// Schritt 2, Version "distance": Sortierung nach Entfernung
-// zum festen Ausgangspunkt (nicht zum Live-Standort des Nutzers!)
+// Schritt 2, Version "distance" (zum festen Ausgangspunkt)
 export function sortByDistance(places, origin) {
   return [...places]
     .map((place) => ({
@@ -31,8 +29,7 @@ export function sortByDistance(places, origin) {
     .sort((a, b) => a._distance - b._distance);
 }
 
-// Kombinierte Funktion: wählt je nach condition ('popularity' | 'distance')
-// die passende Sortierung nach dem gemeinsamen Textfilter.
+// Kombinierte Funktion: wählt je nach condition ('popularity' | 'distance') passende Sortierung
 export function getSortedSuggestions(places, query, condition, origin) {
   const matches = filterByText(places, query);
   if (condition === 'distance') {

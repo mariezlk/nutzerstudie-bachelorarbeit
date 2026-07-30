@@ -86,7 +86,7 @@ function App() {
           Einschätzung.
         </Text>
         <Text ta="center" fz={{ base: "sm", sm: "md" }}>
-          Im Hintergrund wird die Zeit gemessen, die Sie zur Eingabe benötigen.
+          Bitte lösen Sie die Aufgaben nach genauem Lesen der Aufgabenbeschreibung möglichst schnell.
         </Text>
         <Checkbox
           fz={{ base: "sm", sm: "md" }}
@@ -114,9 +114,9 @@ function App() {
     return (
       <StepLayout step={step}>
         <Title ta="center" fz={{ base: "h5", sm: "h3" }}>
-          Hatten Sie schonmal das Problem, dass bei der Eingabe eines Ziels bei Google Maps 
+          Hatten Sie schon mal das Problem, dass bei der Eingabe eines Ziels bei Google Maps 
           oder dem Deutsche Bahn Navigator ihr gewünschtes Ziel nicht während der Eingabe 
-          vorgeschalgen worden ist?
+          vorgeschlagen worden ist?
         </Title>
         <Need onSubmit={handleNeed}/>
       </StepLayout>
@@ -127,7 +127,7 @@ function App() {
       <StepLayout step={step}>
         <Title ta="center" order={3}>Sie haben den ersten Teil der Nutzerstudie abgeschlossen✅</Title>
         <Text ta="center" fz={{ base: "sm", sm: "md" }}>
-          Nun folgt die bereits beschriebene Aufgabe.
+          Nun folgen die bereits beschriebenen Aufgaben.
           Geben Sie hierzu im Eingabefeld Ihre <strong>genaue Heimatadresse</strong> ein und wählen Sie sie aus der
           Vorschlagsliste aus, sobald sie erscheint. Starten Sie bei der Eingabe bitte mit dem
           <strong> Straßennamen</strong> und der <strong>Hausnummer</strong>.
@@ -143,8 +143,9 @@ function App() {
       <StepLayout step={step}>
         <Title ta="center" order={2}>Aufgabe 1</Title>
         <Text ta="center" fz={{ base: "sm", sm: "md" }}>
-          Geben Sie hier bitte Ihre Heimatadresse ein. Starten Sie mit Straßenname und Hausnummer. <br/>
-          Wählen Sie sie aus der Vorschlagsliste aus, sobald die richtige Adresse erscheint.
+          Geben Sie hier bitte Ihre <strong>genaue Heimatadresse</strong> ein. <br />
+          Starten Sie mit <strong>Straßenname</strong> und <strong>Hausnummer</strong>. <br/>
+          Wählen Sie sie aus der <strong>Vorschlagsliste</strong> aus, sobald die <strong>richtige Adresse</strong> erscheint.
         </Text>
         <SearchTask
           origin={ORIGIN}
@@ -166,7 +167,7 @@ function App() {
   if (step === "halfway") {
     return (
       <StepLayout step={step}>
-        <Title ta="center" order={3}>Sie haben Aufgabe 1 bereits abgschlossen, nun folgt Frage 2 ✅</Title>
+        <Title ta="center" order={3}>Sie haben Aufgabe 1 bereits abgeschlossen✅</Title>
         <Button onClick={() => setStep("task2")}>
           Mit Aufgabe 2 fortfahren
         </Button>
@@ -178,8 +179,9 @@ function App() {
       <StepLayout step={step}>
         <Title ta="center" order={2}>Aufgabe 2</Title>
         <Text ta="center" fz={{ base: "sm", sm: "md" }}>
-          Geben Sie hier bitte erneut Ihre Heimatadresse ein. Starten Sie auch hier mit Straßenname und Hausnummer. <br/>
-          Wählen Sie auch hier die Adresse aus der Vorschalgsliste aus, sobald die richtige erscheint.
+          Geben Sie hier bitte erneut Ihre <strong>genaue Heimatadresse</strong> ein. <br/>
+          Starten Sie auch hier mit <strong>Straßenname</strong> und <strong>Hausnummer</strong>. <br/>
+          Wählen Sie auch hier die <strong>richtige Adresse</strong> aus der <strong>Vorschlagsliste</strong>, sobald sie erscheint.
         </Text>
         <SearchTask
           origin={ORIGIN}
@@ -209,8 +211,8 @@ function App() {
   if (step === "done") {
     return (
       <StepLayout step={step}>
-        <Title ta="center">Herzlichen Dank für Ihre Teilnahme 💝</Title>
-        <Text c="blue" ta="center">Sie können das Browserfenster nun schließen :)</Text>
+        <Title ta="center">Herzlichen Dank für Ihre Teilnahme!</Title>
+        <Text c="blue" ta="center">Sie können das Browserfenster nun schließen.</Text>
       </StepLayout>
     );
   }
