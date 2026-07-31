@@ -106,6 +106,10 @@ export default function SearchTask({ origin, condition, taskLabel, onComplete })
         value={query}
         onChange={handleChange}
         placeholder="Musterstraße 1a, 12345 Musterstadt, Musterland"
+        autoComplete="off"
+        data-lpignore="true"       
+        data-1p-ignore="true"       
+        data-form-type="other" 
         styles={{
           input: {
             borderRadius: 0,
@@ -114,7 +118,7 @@ export default function SearchTask({ origin, condition, taskLabel, onComplete })
       />
 
       {suggestions.length > 0 && (
-        <ul style={{ width: "100%", listStyle: 'none', padding: 0, marginTop:"-30px" }}>
+        <ul key={query} style={{ width: "100%", listStyle: 'none', padding: 0, marginTop:"-30px" }}>
           {suggestions.slice(0, 8).map((place) => (
             <li key={place.id}>
               <Button
