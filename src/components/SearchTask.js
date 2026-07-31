@@ -106,6 +106,9 @@ export default function SearchTask({ origin, condition, taskLabel, onComplete })
         value={query}
         onChange={handleChange}
         placeholder="Musterstraße 1a, 12345 Musterstadt, Musterland"
+        name="destination-search"
+        inputMode="text"
+        type='search'
         autoComplete="off"
         data-lpignore="true"       
         data-1p-ignore="true"       
